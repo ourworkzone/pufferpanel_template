@@ -1,0 +1,52 @@
+{
+    "type": "BOT",
+    "data": {
+        "ip": {
+            "type": "string",
+            "desc": "What IP to bind the server to",
+            "display": "IP",
+            "required": true,
+            "value": "0.0.0.0"
+        },
+        "memory": {
+            "type": "integer",
+            "desc": "How much memory in MB to allocate to the BungeeCord server. It is generally recommended to allocated 512MB RAM for every 500 players. Please keep in mind that additional plugins may impact the amount needed in your case.",
+            "display": "Memory (MB)",
+            "required": true,
+            "value": "256"
+        },
+        "port": {
+            "type": "integer",
+            "desc": "What port to bind the server to",
+            "display": "Port",
+            "required": true,
+            "value": "6000"
+        }
+    },
+    "display": "BOT EGG NodeJS_14",
+    "environment": {
+        "type": "standard"
+    },
+    "install": [
+        {
+            "commands": [
+                "npm install"
+            ],
+            "type": "command"
+        }
+    ],
+    "run": {
+        "command": "node index.js",
+        "stop": "end",
+        "environmentVars": {},
+        "pre": [],
+        "post": []
+    },
+    "supportedEnvironments": [
+        {
+            "image": "node",
+            "type": "docker"
+        }
+    ],
+    "name": "BOT"
+}
